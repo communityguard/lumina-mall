@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: lumina-mall
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev --omit=optional
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: USE_PLAYWRIGHT
+        value: false
+      - key: REFRESH_HOURS
+        value: 6
+      - key: CONCURRENCY
+        value: 4
+      - key: TIMEOUT_MS
+        value: 12000

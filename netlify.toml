@@ -1,0 +1,29 @@
+# Netlify static deployment configuration.
+# This publishes the frontend from /public. The live long-running scraper server
+# is still available with `node server.js` on a Node host such as Render/Railway/Fly.
+[build]
+  publish = "public"
+  command = "node scripts/build-static-cache.mjs"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # Keep Netlify deploys reliable by default. Set to "true" in Netlify env vars
+  # if you want the build to attempt a one-time HTTP scrape into public/cache.json.
+  BUILD_LIVE_IMAGES = "false"
+  USE_PLAYWRIGHT = "false"
+
+[dev]
+  command = "node server.js"
+  port = 3000
+  publish = "public"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/cache.json"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"

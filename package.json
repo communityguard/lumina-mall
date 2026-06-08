@@ -1,0 +1,21 @@
+{
+  "name": "lumina-mall-server",
+  "version": "1.0.0",
+  "description": "LUMINA MALL \u2014 deploy-ready virtual mall frontend plus optional Node sale-image scraper API.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "scrape": "node scrape-once.js",
+    "build": "node scripts/build-static-cache.mjs",
+    "test:parse": "node test-parse.js",
+    "check": "node --check server.js && node --check scraper.js && node --check stores.js && node --check overrides.js && node --check scripts/build-static-cache.mjs && node --check scripts/predeploy-check.mjs && node test-parse.js && node scripts/predeploy-check.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "optionalDependencies": {
+    "playwright": "^1.44.0"
+  }
+}
