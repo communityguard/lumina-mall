@@ -1,0 +1,48 @@
+headersOrigin = "config"
+plugins = []
+redirects = []
+
+[dev]
+command = "node server.js"
+port = 3000.0
+publish = "public"
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "/Users/rudyfox/Downloads/lumina-mall-deploy-ready/public"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "node scripts/build-static-cache.mjs"
+
+[build.environment]
+NODE_VERSION = "20"
+BUILD_LIVE_IMAGES = "false"
+USE_PLAYWRIGHT = "false"
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+for = "/cache.json"
+
+[headers.values]
+Cache-Control = "public, max-age=300, must-revalidate"
