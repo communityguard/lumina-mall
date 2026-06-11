@@ -129,7 +129,7 @@ function makeStoreCoverSvg(store) {
   const h2 = (h + 38) % 360;
   const h3 = (h + 210) % 360;
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="${name} sale cover">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="${name} store cover">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="hsl(${h}, 72%, 28%)"/>
@@ -158,8 +158,8 @@ function makeStoreCoverSvg(store) {
     <text x="800" y="248" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" letter-spacing="7" fill="#fff5d6" fill-opacity="0.92">LUMINA MALL</text>
     <text x="800" y="520" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="118" font-weight="700" fill="#ffffff">${name}</text>
     <line x1="360" y1="585" x2="1240" y2="585" stroke="#e8c57e" stroke-opacity="0.75" stroke-width="4"/>
-    <text x="800" y="682" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="800" letter-spacing="10" fill="#e8c57e">${category} • SALE</text>
-    <text x="800" y="758" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#ffffff" fill-opacity="0.72">Tap to visit the live retailer sale page</text>
+    <text x="800" y="682" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="800" letter-spacing="10" fill="#e8c57e">${category} • OPEN</text>
+    <text x="800" y="758" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#ffffff" fill-opacity="0.72">Tap to visit the retailer's official store</text>
   </g>
 </svg>`;
 }
