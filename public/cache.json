@@ -1,0 +1,529 @@
+{
+  "lastRefresh": null,
+  "refreshing": false,
+  "count": 58,
+  "stores": {
+    "Macy's": {
+      "name": "Macy's",
+      "category": "Department",
+      "url": "https://www.macys.com/shop/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "JCPenney": {
+      "name": "JCPenney",
+      "category": "Department",
+      "url": "https://www.jcpenney.com/g/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Belk": {
+      "name": "Belk",
+      "category": "Department",
+      "url": "https://www.belk.com/sale/",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Nordstrom": {
+      "name": "Nordstrom",
+      "category": "Department",
+      "url": "https://www.nordstrom.com/browse/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Kohl's": {
+      "name": "Kohl's",
+      "category": "Department",
+      "url": "https://www.kohls.com/sale.jsp",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Dillard's": {
+      "name": "Dillard's",
+      "category": "Department",
+      "url": "https://www.dillards.com/c/sale-clearance",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Gap": {
+      "name": "Gap",
+      "category": "Apparel",
+      "url": "https://www.gap.com/browse/sale.do",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Old Navy": {
+      "name": "Old Navy",
+      "category": "Apparel",
+      "url": "https://oldnavy.gap.com/browse/sale.do",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "American Eagle": {
+      "name": "American Eagle",
+      "category": "Apparel",
+      "url": "https://www.ae.com/us/en/c/sale/cat6680098",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Hollister": {
+      "name": "Hollister",
+      "category": "Apparel",
+      "url": "https://www.hollisterco.com/shop/us/mens-clearance",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Abercrombie & Fitch": {
+      "name": "Abercrombie & Fitch",
+      "category": "Apparel",
+      "url": "https://www.abercrombie.com/shop/us/mens-sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Aéropostale": {
+      "name": "Aéropostale",
+      "category": "Apparel",
+      "url": "https://www.aeropostale.com/sale/",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Forever 21": {
+      "name": "Forever 21",
+      "category": "Apparel",
+      "url": "https://www.forever21.com/us/sale.html",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "H&M": {
+      "name": "H&M",
+      "category": "Apparel",
+      "url": "https://www2.hm.com/en_us/sale.html",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Uniqlo": {
+      "name": "Uniqlo",
+      "category": "Apparel",
+      "url": "https://www.uniqlo.com/us/en/special-offer",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Express": {
+      "name": "Express",
+      "category": "Apparel",
+      "url": "https://www.express.com/c/sale-3540",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Buckle": {
+      "name": "Buckle",
+      "category": "Apparel",
+      "url": "https://www.buckle.com/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "PacSun": {
+      "name": "PacSun",
+      "category": "Apparel",
+      "url": "https://www.pacsun.com/sale/",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Urban Outfitters": {
+      "name": "Urban Outfitters",
+      "category": "Apparel",
+      "url": "https://www.urbanoutfitters.com/sale-uo",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Anthropologie": {
+      "name": "Anthropologie",
+      "category": "Apparel",
+      "url": "https://www.anthropologie.com/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "J.Crew": {
+      "name": "J.Crew",
+      "category": "Apparel",
+      "url": "https://www.jcrew.com/c/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Banana Republic": {
+      "name": "Banana Republic",
+      "category": "Apparel",
+      "url": "https://bananarepublic.gap.com/browse/sale.do",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Foot Locker": {
+      "name": "Foot Locker",
+      "category": "Athletic",
+      "url": "https://www.footlocker.com/category/sale.html",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Finish Line": {
+      "name": "Finish Line",
+      "category": "Athletic",
+      "url": "https://www.finishline.com/store/shop/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Champs Sports": {
+      "name": "Champs Sports",
+      "category": "Athletic",
+      "url": "https://www.champssports.com/category/sale.html",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Nike": {
+      "name": "Nike",
+      "category": "Athletic",
+      "url": "https://www.nike.com/w/sale-3yaep",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Adidas": {
+      "name": "Adidas",
+      "category": "Athletic",
+      "url": "https://www.adidas.com/us/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Lululemon": {
+      "name": "Lululemon",
+      "category": "Athletic",
+      "url": "https://shop.lululemon.com/c/we-made-too-much/_/N-1z13ziiZ8t6",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Under Armour": {
+      "name": "Under Armour",
+      "category": "Athletic",
+      "url": "https://www.underarmour.com/en-us/c/outlet/",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Dick's Sporting Goods": {
+      "name": "Dick's Sporting Goods",
+      "category": "Athletic",
+      "url": "https://www.dickssportinggoods.com/c/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Sephora": {
+      "name": "Sephora",
+      "category": "Beauty",
+      "url": "https://www.sephora.com/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Ulta Beauty": {
+      "name": "Ulta Beauty",
+      "category": "Beauty",
+      "url": "https://www.ulta.com/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Bath & Body Works": {
+      "name": "Bath & Body Works",
+      "category": "Beauty",
+      "url": "https://www.bathandbodyworks.com/c/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "MAC Cosmetics": {
+      "name": "MAC Cosmetics",
+      "category": "Beauty",
+      "url": "https://www.maccosmetics.com/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "The Body Shop": {
+      "name": "The Body Shop",
+      "category": "Beauty",
+      "url": "https://www.thebodyshop.com/en-us/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Apple": {
+      "name": "Apple",
+      "category": "Tech",
+      "url": "https://www.apple.com/shop/refurbished",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Best Buy": {
+      "name": "Best Buy",
+      "category": "Tech",
+      "url": "https://www.bestbuy.com/site/electronics-deals/pcmcat1530641122892.c",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "GameStop": {
+      "name": "GameStop",
+      "category": "Tech",
+      "url": "https://www.gamestop.com/deals",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Microsoft Store": {
+      "name": "Microsoft Store",
+      "category": "Tech",
+      "url": "https://www.microsoft.com/en-us/store/b/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Pandora": {
+      "name": "Pandora",
+      "category": "Jewelry",
+      "url": "https://us.pandora.net/en/sale/",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Kay Jewelers": {
+      "name": "Kay Jewelers",
+      "category": "Jewelry",
+      "url": "https://www.kay.com/en/kaystore/sales",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Zales": {
+      "name": "Zales",
+      "category": "Jewelry",
+      "url": "https://www.zales.com/clearance",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Claire's": {
+      "name": "Claire's",
+      "category": "Accessories",
+      "url": "https://www.claires.com/us/sale/",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Sunglass Hut": {
+      "name": "Sunglass Hut",
+      "category": "Accessories",
+      "url": "https://www.sunglasshut.com/us/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Pottery Barn": {
+      "name": "Pottery Barn",
+      "category": "Home",
+      "url": "https://www.potterybarn.com/shop/sale/",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Williams Sonoma": {
+      "name": "Williams Sonoma",
+      "category": "Home",
+      "url": "https://www.williams-sonoma.com/shop/sale/",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Crate & Barrel": {
+      "name": "Crate & Barrel",
+      "category": "Home",
+      "url": "https://www.crateandbarrel.com/sale/",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Yankee Candle": {
+      "name": "Yankee Candle",
+      "category": "Home",
+      "url": "https://www.yankeecandle.com/category/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "DSW": {
+      "name": "DSW",
+      "category": "Shoes",
+      "url": "https://www.dsw.com/en/us/category/sale/N-1z141kw",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Famous Footwear": {
+      "name": "Famous Footwear",
+      "category": "Shoes",
+      "url": "https://www.famousfootwear.com/en_us/clearance.html",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Journeys": {
+      "name": "Journeys",
+      "category": "Shoes",
+      "url": "https://www.journeys.com/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Vans": {
+      "name": "Vans",
+      "category": "Shoes",
+      "url": "https://www.vans.com/shop/mens-sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Crocs": {
+      "name": "Crocs",
+      "category": "Shoes",
+      "url": "https://www.crocs.com/c/sale",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "LEGO": {
+      "name": "LEGO",
+      "category": "Specialty",
+      "url": "https://www.lego.com/en-us/categories/sales-and-deals",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Disney Store": {
+      "name": "Disney Store",
+      "category": "Specialty",
+      "url": "https://www.shopdisney.com/sale-and-values",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Hot Topic": {
+      "name": "Hot Topic",
+      "category": "Specialty",
+      "url": "https://www.hottopic.com/sale/",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Spencer's": {
+      "name": "Spencer's",
+      "category": "Specialty",
+      "url": "https://www.spencersonline.com/sale/",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    },
+    "Barnes & Noble": {
+      "name": "Barnes & Noble",
+      "category": "Books & Fun",
+      "url": "https://www.barnesandnoble.com/b/sale-bargain-books/_/N-29Z8q8",
+      "ok": false,
+      "image": null,
+      "source": "static-fallback",
+      "error": "No live image cache generated for this deployment."
+    }
+  }
+}
