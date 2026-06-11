@@ -4,15 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- ============ SEO ============ -->
-<title>LUMINA MALL — 58 Flagship Stores · Every Sale, One Roof</title>
-<meta name="description" content="Step into LUMINA MALL — a cinematic virtual directory linking you to live sales at 58 of America's most-loved retailers." />
+<title>LUMINA MALL — 58 Flagship Stores · One Luminous Roof</title>
+<meta name="description" content="Step into LUMINA MALL — a cinematic virtual directory linking you to the official storefronts of 58 of America's most-loved retailers." />
 <meta name="theme-color" content="#07070d" />
 <link rel="manifest" href="/manifest.webmanifest" />
 <link rel="icon" href="/icon.svg" type="image/svg+xml" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-title" content="Lumina Mall" />
 <meta property="og:title" content="LUMINA MALL — The Future of Mall Shopping" />
-<meta property="og:description" content="58 flagship retailers, every sale, one luminous atrium." />
+<meta property="og:description" content="58 flagship retailers, one luminous atrium." />
 <meta property="og:type" content="website" />
 
 <!-- ============ Fonts ============ -->
@@ -268,6 +268,7 @@
   /* The "window display" cover */
   .sf-cover {
     position: relative; aspect-ratio: 16/10; overflow: hidden;
+    max-height: 230px; contain: layout paint;
     background: linear-gradient(135deg, hsl(var(--h) 60% 32%) 0%, hsl(calc(var(--h) + 30) 55% 16%) 100%);
     display: flex; align-items: center; justify-content: center;
     text-align: center; padding: 22px 18px;
@@ -297,7 +298,8 @@
   /* Live sale photo (hydrated from the API; falls back to the gradient) */
   .sf-photo {
     position: absolute; inset: 0; width: 100%; height: 100%;
-    object-fit: cover; object-position: center; z-index: 1;
+    max-width: 100%; max-height: 100%;
+    object-fit: cover; object-position: center top; z-index: 1;
     opacity: 0; transition: opacity .6s ease;
   }
   .sf-photo.loaded { opacity: 1; }
@@ -544,7 +546,7 @@
     </h1>
     <p class="reveal in max-w-xl text-dim text-base sm:text-lg leading-relaxed mb-10" style="animation-delay:.4s">
       Fifty-eight of America's most-loved retailers — gathered beneath one luminous skylight.
-      Every storefront is a portal to that brand's <em class="text-gold not-italic">live sale page</em>.
+      Every storefront is a portal to that brand's <em class="text-gold not-italic">official store</em> — live, exactly as shoppers see it.
     </p>
     <button id="enterBtn" onclick="enterMall()"
       class="btn-enter pulse-ring rounded-full px-12 py-5 text-sm sm:text-base font-body uppercase reveal in"
@@ -571,8 +573,8 @@
     <!-- Heading -->
     <div class="text-center mb-10 sm:mb-12">
       <p class="font-script italic text-xl text-dim mb-2">the grand atrium</p>
-      <h2 class="font-display text-4xl sm:text-6xl tracking-wide mb-4">Every Sale, <span class="text-gradient-gold">Every Store</span></h2>
-      <p class="text-dim max-w-xl mx-auto">Tap a storefront to walk straight to that brand's live sale page. New tab — your seat in the atrium is saved.</p>
+      <h2 class="font-display text-4xl sm:text-6xl tracking-wide mb-4">Every Store, <span class="text-gradient-gold">One Atrium</span></h2>
+      <p class="text-dim max-w-xl mx-auto">Tap a storefront to walk straight into that brand's official store. New tab — your seat in the atrium is saved.</p>
     </div>
 
     <!-- Search + filter chips -->
@@ -604,9 +606,9 @@
     <p class="text-center text-xs text-dim mt-12 leading-relaxed max-w-lg mx-auto">
       LUMINA MALL is an independent design showcase. All brand names and links lead to each retailer's official site;
       LUMINA is not affiliated with, endorsed by, or sponsored by any listed brand. When the companion server is running,
-      each cover shows the retailer's own published sale-page preview image (their <code>og:image</code>), fetched and cached
+      each cover shows the retailer's own published homepage preview image (their <code>og:image</code>), fetched and cached
       server-side; tiles without a retrievable image keep the themed cover. Sale URLs can change — if a link lands on a
-      brand's homepage, look for their current sale section there.
+      brand's site, their current sales and offers are easy to find from there.
     </p>
   </div>
 </section>
@@ -646,7 +648,7 @@
 <script>
 /* ==================================================================
    LUMINA MALL · directory of 58 real retailers
-   Each tile links out to that brand's live sale page in a new tab.
+   Each tile links out to that brand's official storefront in a new tab.
 ================================================================== */
 
 /* ---------- Category styling ---------- */
@@ -665,87 +667,87 @@ const CATS = {
 };
 
 /* ---------- 58 REAL STORES ---------- */
-/* [ name, category, url-to-sale-page ] */
+/* [ name, category, url-to-official-store ] */
 const STORES = [
   // Department (6)
-  ["Macy's",                 'Department', 'https://www.macys.com/shop/sale'],
-  ['JCPenney',               'Department', 'https://www.jcpenney.com/g/sale'],
-  ['Belk',                   'Department', 'https://www.belk.com/sale/'],
-  ['Nordstrom',              'Department', 'https://www.nordstrom.com/browse/sale'],
-  ["Kohl's",                 'Department', 'https://www.kohls.com/sale.jsp'],
-  ["Dillard's",              'Department', 'https://www.dillards.com/c/sale-clearance'],
+  ["Macy's",                 'Department', 'https://www.macys.com/'],
+  ['JCPenney',               'Department', 'https://www.jcpenney.com/'],
+  ['Belk',                   'Department', 'https://www.belk.com/'],
+  ['Nordstrom',              'Department', 'https://www.nordstrom.com/'],
+  ["Kohl's",                 'Department', 'https://www.kohls.com/'],
+  ["Dillard's",              'Department', 'https://www.dillards.com/'],
 
   // Apparel (16)
-  ['Gap',                    'Apparel',    'https://www.gap.com/browse/sale.do'],
-  ['Old Navy',               'Apparel',    'https://oldnavy.gap.com/browse/sale.do'],
-  ['American Eagle',         'Apparel',    'https://www.ae.com/us/en/c/sale/cat6680098'],
-  ['Hollister',              'Apparel',    'https://www.hollisterco.com/shop/us/mens-clearance'],
-  ['Abercrombie & Fitch',    'Apparel',    'https://www.abercrombie.com/shop/us/mens-sale'],
-  ['Aéropostale',            'Apparel',    'https://www.aeropostale.com/sale/'],
-  ['Free People',            'Apparel',    'https://www.freepeople.com/sale/'],
-  ['H&M',                    'Apparel',    'https://www2.hm.com/en_us/sale.html'],
-  ['Uniqlo',                 'Apparel',    'https://www.uniqlo.com/us/en/special-offer'],
-  ['Express',                'Apparel',    'https://www.express.com/c/sale-3540'],
-  ['Buckle',                 'Apparel',    'https://www.buckle.com/sale'],
-  ['PacSun',                 'Apparel',    'https://www.pacsun.com/sale/'],
-  ['Urban Outfitters',       'Apparel',    'https://www.urbanoutfitters.com/sale-uo'],
-  ['Anthropologie',          'Apparel',    'https://www.anthropologie.com/sale'],
-  ['J.Crew',                 'Apparel',    'https://www.jcrew.com/c/sale'],
-  ['Banana Republic',        'Apparel',    'https://bananarepublic.gap.com/browse/sale.do'],
+  ['Gap',                    'Apparel',    'https://www.gap.com/'],
+  ['Old Navy',               'Apparel',    'https://oldnavy.gap.com/'],
+  ['American Eagle',         'Apparel',    'https://www.ae.com/us/en/'],
+  ['Hollister',              'Apparel',    'https://www.hollisterco.com/shop/us/'],
+  ['Abercrombie & Fitch',    'Apparel',    'https://www.abercrombie.com/shop/us/'],
+  ['Aéropostale',            'Apparel',    'https://www.aeropostale.com/'],
+  ['Free People',            'Apparel',    'https://www.freepeople.com/'],
+  ['H&M',                    'Apparel',    'https://www2.hm.com/en_us/'],
+  ['Uniqlo',                 'Apparel',    'https://www.uniqlo.com/us/en/'],
+  ['Express',                'Apparel',    'https://www.express.com/'],
+  ['Buckle',                 'Apparel',    'https://www.buckle.com/'],
+  ['PacSun',                 'Apparel',    'https://www.pacsun.com/'],
+  ['Urban Outfitters',       'Apparel',    'https://www.urbanoutfitters.com/'],
+  ['Anthropologie',          'Apparel',    'https://www.anthropologie.com/'],
+  ['J.Crew',                 'Apparel',    'https://www.jcrew.com/'],
+  ['Banana Republic',        'Apparel',    'https://bananarepublic.gap.com/'],
 
   // Athletic (8)
-  ['Foot Locker',            'Athletic',   'https://www.footlocker.com/category/sale.html'],
-  ['Finish Line',            'Athletic',   'https://www.finishline.com/store/shop/sale'],
-  ['Champs Sports',          'Athletic',   'https://www.champssports.com/category/sale.html'],
-  ['Nike',                   'Athletic',   'https://www.nike.com/w/sale-3yaep'],
-  ['Adidas',                 'Athletic',   'https://www.adidas.com/us/sale'],
-  ['Lululemon',              'Athletic',   'https://shop.lululemon.com/c/we-made-too-much/_/N-1z13ziiZ8t6'],
-  ['Under Armour',           'Athletic',   'https://www.underarmour.com/en-us/c/outlet/'],
-  ["Dick's Sporting Goods",  'Athletic',   'https://www.dickssportinggoods.com/c/sale'],
+  ['Foot Locker',            'Athletic',   'https://www.footlocker.com/'],
+  ['Finish Line',            'Athletic',   'https://www.finishline.com/'],
+  ['Champs Sports',          'Athletic',   'https://www.champssports.com/'],
+  ['Nike',                   'Athletic',   'https://www.nike.com/'],
+  ['Adidas',                 'Athletic',   'https://www.adidas.com/us'],
+  ['Lululemon',              'Athletic',   'https://shop.lululemon.com/'],
+  ['Under Armour',           'Athletic',   'https://www.underarmour.com/en-us/'],
+  ["Dick's Sporting Goods",  'Athletic',   'https://www.dickssportinggoods.com/'],
 
   // Beauty (5)
-  ['Sephora',                'Beauty',     'https://www.sephora.com/sale'],
-  ['Ulta Beauty',            'Beauty',     'https://www.ulta.com/sale'],
-  ['Bath & Body Works',      'Beauty',     'https://www.bathandbodyworks.com/c/sale'],
-  ['MAC Cosmetics',          'Beauty',     'https://www.maccosmetics.com/sale'],
+  ['Sephora',                'Beauty',     'https://www.sephora.com/'],
+  ['Ulta Beauty',            'Beauty',     'https://www.ulta.com/'],
+  ['Bath & Body Works',      'Beauty',     'https://www.bathandbodyworks.com/'],
+  ['MAC Cosmetics',          'Beauty',     'https://www.maccosmetics.com/'],
   ['The Body Shop',          'Beauty',     'https://us.thebodyshop.com/'],
 
   // Tech (4)
-  ['Apple',                  'Tech',       'https://www.apple.com/shop/refurbished'],
-  ['Best Buy',               'Tech',       'https://www.bestbuy.com/site/electronics-deals/pcmcat1530641122892.c'],
-  ['GameStop',               'Tech',       'https://www.gamestop.com/deals'],
-  ['Microsoft Store',        'Tech',       'https://www.microsoft.com/en-us/store/b/sale'],
+  ['Apple',                  'Tech',       'https://www.apple.com/'],
+  ['Best Buy',               'Tech',       'https://www.bestbuy.com/'],
+  ['GameStop',               'Tech',       'https://www.gamestop.com/'],
+  ['Microsoft Store',        'Tech',       'https://www.microsoft.com/en-us/store/'],
 
   // Jewelry (3)
-  ['Pandora',                'Jewelry',    'https://us.pandora.net/en/sale/'],
-  ['Kay Jewelers',           'Jewelry',    'https://www.kay.com/en/kaystore/sales'],
-  ['Zales',                  'Jewelry',    'https://www.zales.com/clearance'],
+  ['Pandora',                'Jewelry',    'https://us.pandora.net/'],
+  ['Kay Jewelers',           'Jewelry',    'https://www.kay.com/'],
+  ['Zales',                  'Jewelry',    'https://www.zales.com/'],
 
   // Accessories (2)
-  ["Claire's",               'Accessories','https://www.claires.com/us/sale/'],
-  ['Sunglass Hut',           'Accessories','https://www.sunglasshut.com/us/sale'],
+  ["Claire's",               'Accessories','https://www.claires.com/us/'],
+  ['Sunglass Hut',           'Accessories','https://www.sunglasshut.com/us/'],
 
   // Home (4)
-  ['Pottery Barn',           'Home',       'https://www.potterybarn.com/shop/sale/'],
-  ['Williams Sonoma',        'Home',       'https://www.williams-sonoma.com/shop/sale/'],
-  ['Crate & Barrel',         'Home',       'https://www.crateandbarrel.com/sale/'],
-  ['Yankee Candle',          'Home',       'https://www.yankeecandle.com/category/sale'],
+  ['Pottery Barn',           'Home',       'https://www.potterybarn.com/'],
+  ['Williams Sonoma',        'Home',       'https://www.williams-sonoma.com/'],
+  ['Crate & Barrel',         'Home',       'https://www.crateandbarrel.com/'],
+  ['Yankee Candle',          'Home',       'https://www.yankeecandle.com/'],
 
   // Shoes (5)
-  ['DSW',                    'Shoes',      'https://www.dsw.com/en/us/category/sale/N-1z141kw'],
-  ['Famous Footwear',        'Shoes',      'https://www.famousfootwear.com/en_us/clearance.html'],
-  ['Journeys',               'Shoes',      'https://www.journeys.com/sale'],
-  ['Vans',                   'Shoes',      'https://www.vans.com/shop/mens-sale'],
-  ['Crocs',                  'Shoes',      'https://www.crocs.com/c/sale'],
+  ['DSW',                    'Shoes',      'https://www.dsw.com/'],
+  ['Famous Footwear',        'Shoes',      'https://www.famousfootwear.com/'],
+  ['Journeys',               'Shoes',      'https://www.journeys.com/'],
+  ['Vans',                   'Shoes',      'https://www.vans.com/'],
+  ['Crocs',                  'Shoes',      'https://www.crocs.com/'],
 
   // Specialty (4)
-  ['LEGO',                   'Specialty',  'https://www.lego.com/en-us/categories/sales-and-deals'],
-  ['Disney Store',           'Specialty',  'https://www.shopdisney.com/sale-and-values'],
-  ['Hot Topic',              'Specialty',  'https://www.hottopic.com/sale/'],
-  ["Spencer's",              'Specialty',  'https://www.spencersonline.com/sale/'],
+  ['LEGO',                   'Specialty',  'https://www.lego.com/en-us'],
+  ['Disney Store',           'Specialty',  'https://www.shopdisney.com/'],
+  ['Hot Topic',              'Specialty',  'https://www.hottopic.com/'],
+  ["Build-A-Bear Workshop",              'Specialty',  'https://www.buildabear.com/'],
 
   // Books & Fun (1)
-  ['Barnes & Noble',         'Books & Fun','https://www.barnesandnoble.com/b/sale-bargain-books/_/N-29Z8q8'],
+  ['Barnes & Noble',         'Books & Fun','https://www.barnesandnoble.com/'],
 ];
 
 /* ---------- State ---------- */
@@ -876,19 +878,19 @@ function renderStores(){
               style="--sf-accent:${c.color}; animation-delay:${delay}s"
               data-name="${name}"
               onclick="onStoreClick(event, this, '${name.replace(/'/g,"\\'")}')"
-              aria-label="Visit ${name} sale page (opens in new tab)">
+              aria-label="Visit the ${name} store (opens in new tab)">
       <span class="storefront__halo"></span>
       <div class="sf-cover" style="--h:${hue}">
         <span class="sf-pattern pat-${pat}" aria-hidden="true"></span>
         <img class="sf-photo" alt="" aria-hidden="true" referrerpolicy="no-referrer" loading="lazy" />
         <span class="sf-cornericon" aria-hidden="true">${c.icon}</span>
-        <span class="sf-badge"><span style="color:${c.color}">★</span> SALE</span>
+        <span class="sf-badge"><span style="color:${c.color}">★</span> OPEN</span>
         <span class="sf-name">${name}</span>
         <span class="sf-shine" aria-hidden="true"></span>
       </div>
       <div class="sf-body">
         <span class="sf-cat">${cat}</span>
-        <span class="sf-cta">Visit live sale
+        <span class="sf-cta">Visit store
           <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </span>
       </div>
@@ -977,7 +979,7 @@ function applyLiveImages(){
       if(badge){
         if(entry.source === 'local-cover'){
           badge.classList.remove('badge-live');
-          badge.innerHTML = '<span style="color:var(--gold)">★</span> SALE';
+          badge.innerHTML = '<span style="color:var(--gold)">★</span> OPEN';
         } else if(!badge.classList.contains('badge-live')){
           badge.classList.add('badge-live');
           badge.innerHTML = '<span class="dot"></span> LIVE';
@@ -999,13 +1001,13 @@ function setLiveStatus(state, lastRefresh, count, liveCount){
   if(state === 'live'){
     el.innerHTML = `<span style="color:#5cf08a">●</span> <span class="text-dim">Images ready · ${count}/58 covers loaded · ${liveCount ?? count} live${when ? ' · updated ' + when : ''}</span>`;
   } else if(state === 'static-live'){
-    el.innerHTML = `<span style="color:#5cf08a">●</span> <span class="text-dim">Static cache · ${count}/58 sale images loaded${when ? ' · built ' + when : ''}</span>`;
+    el.innerHTML = `<span style="color:#5cf08a">●</span> <span class="text-dim">Static cache · ${count}/58 store covers loaded${when ? ' · built ' + when : ''}</span>`;
   } else if(state === 'empty'){
     el.innerHTML = `<span style="color:var(--gold)">●</span> <span class="text-dim">Server connected · no images cached yet — the themed storefronts are active</span>`;
   } else if(state === 'static-empty'){
     el.innerHTML = `<span style="color:var(--gold)">●</span> <span class="text-dim">Static deployment · themed storefronts active</span>`;
   } else {
-    el.innerHTML = `<span class="text-dim">○ Showing themed covers — run the LUMINA server for live sale images</span>`;
+    el.innerHTML = `<span class="text-dim">○ Showing themed covers — run the LUMINA server for live store imagery</span>`;
   }
 }
 
@@ -1152,7 +1154,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
   renderStores();
   buildMap();
   observeReveals();
-  hydrateImages();        // pull live sale images from the API (if the server is running)
+  hydrateImages();        // pull live store images from the API (if the server is running)
 });
 </script>
 </body>
