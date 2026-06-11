@@ -16,7 +16,7 @@ export const STORES = [
   { name: 'Hollister',             category: 'Apparel',     url: 'https://www.hollisterco.com/shop/us/mens-clearance' },
   { name: 'Abercrombie & Fitch',   category: 'Apparel',     url: 'https://www.abercrombie.com/shop/us/mens-sale' },
   { name: 'Aéropostale',           category: 'Apparel',     url: 'https://www.aeropostale.com/sale/' },
-  { name: 'Forever 21',            category: 'Apparel',     url: 'https://www.forever21.com/us/sale.html' },
+  { name: 'Free People',           category: 'Apparel',     url: 'https://www.freepeople.com/sale/' },
   { name: 'H&M',                   category: 'Apparel',     url: 'https://www2.hm.com/en_us/sale.html' },
   { name: 'Uniqlo',                category: 'Apparel',     url: 'https://www.uniqlo.com/us/en/special-offer' },
   { name: 'Express',               category: 'Apparel',     url: 'https://www.express.com/c/sale-3540' },
@@ -42,7 +42,7 @@ export const STORES = [
   { name: 'Ulta Beauty',           category: 'Beauty',      url: 'https://www.ulta.com/sale' },
   { name: 'Bath & Body Works',     category: 'Beauty',      url: 'https://www.bathandbodyworks.com/c/sale' },
   { name: 'MAC Cosmetics',         category: 'Beauty',      url: 'https://www.maccosmetics.com/sale' },
-  { name: 'The Body Shop',         category: 'Beauty',      url: 'https://www.thebodyshop.com/en-us/sale' },
+  { name: 'The Body Shop',         category: 'Beauty',      url: 'https://us.thebodyshop.com/' },
 
   // Tech (4)
   { name: 'Apple',                 category: 'Tech',        url: 'https://www.apple.com/shop/refurbished' },

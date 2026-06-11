@@ -46,9 +46,23 @@ async function loadCache() {
     cache = data.stores || {};
     lastRefresh = data.lastRefresh || null;
     console.log(`[cache] loaded ${Object.keys(cache).length} entries (last refresh ${lastRefresh || 'n/a'})`);
+    return;
   } catch {
-    console.log('[cache] no cache.json yet — will scrape on startup');
+    // fall through to the committed static cache
   }
+  try {
+    const data = JSON.parse(await readFile(join(PUBLIC, 'cache.json'), 'utf8'));
+    const seeded = Object.values(data.stores || {}).filter((s) => s && s.ok && s.image);
+    if (seeded.length) {
+      for (const s of seeded) cache[s.name] = s;
+      lastRefresh = data.lastRefresh || null;
+      console.log(`[cache] seeded ${seeded.length} live images from public/cache.json (built ${lastRefresh || 'n/a'})`);
+      return;
+    }
+  } catch {
+    // no usable static cache either
+  }
+  console.log('[cache] no cache found — will scrape on startup');
 }
 async function saveCache() {
   try { await writeFile(CACHE_FILE, JSON.stringify({ lastRefresh, stores: cache }, null, 2)); }
@@ -66,7 +80,12 @@ async function refreshAll() {
       console.log(`[scrape] ${r.ok ? 'OK ' : '·· '} ${store.name.padEnd(24)} ${r.ok ? r.source : (r.error || '')}`);
       return r;
     });
-    for (const r of results) cache[r.name] = r;
+    for (const r of results) {
+      const prev = cache[r.name];
+      // Keep the last-known-good live image rather than clobbering it with a failed scrape
+      if (!r.ok && prev && prev.ok && prev.image && prev.source !== 'local-cover') continue;
+      cache[r.name] = r;
+    }
     lastRefresh = new Date().toISOString();
     await saveCache();
     const ok = results.filter((r) => r.ok).length;
