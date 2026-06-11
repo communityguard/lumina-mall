@@ -682,7 +682,7 @@ const STORES = [
   ['Hollister',              'Apparel',    'https://www.hollisterco.com/shop/us/mens-clearance'],
   ['Abercrombie & Fitch',    'Apparel',    'https://www.abercrombie.com/shop/us/mens-sale'],
   ['Aéropostale',            'Apparel',    'https://www.aeropostale.com/sale/'],
-  ['Forever 21',             'Apparel',    'https://www.forever21.com/us/sale.html'],
+  ['Free People',            'Apparel',    'https://www.freepeople.com/sale/'],
   ['H&M',                    'Apparel',    'https://www2.hm.com/en_us/sale.html'],
   ['Uniqlo',                 'Apparel',    'https://www.uniqlo.com/us/en/special-offer'],
   ['Express',                'Apparel',    'https://www.express.com/c/sale-3540'],
@@ -708,7 +708,7 @@ const STORES = [
   ['Ulta Beauty',            'Beauty',     'https://www.ulta.com/sale'],
   ['Bath & Body Works',      'Beauty',     'https://www.bathandbodyworks.com/c/sale'],
   ['MAC Cosmetics',          'Beauty',     'https://www.maccosmetics.com/sale'],
-  ['The Body Shop',          'Beauty',     'https://www.thebodyshop.com/en-us/sale'],
+  ['The Body Shop',          'Beauty',     'https://us.thebodyshop.com/'],
 
   // Tech (4)
   ['Apple',                  'Tech',       'https://www.apple.com/shop/refurbished'],
@@ -967,6 +967,7 @@ function applyLiveImages(){
     const photo = $('.sf-photo', card);
     if(!photo || !cover) return;
     if(!entry || !entry.ok || !entry.image){ return; } // keep themed gradient
+    if(entry.source === 'local-cover'){ return; }      // server SVG duplicates the tile's own name/badge — themed gradient already covers this case
     if(photo.dataset.bound === entry.image) return;     // already applied
     photo.dataset.bound = entry.image;
     photo.onload = () => {
